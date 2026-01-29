@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>🔗 URL Shortener</h1>
+    <p class="subtitle">Shorten long URLs instantly</p>
+    
+    <div class="card">
+        <input type="text" id="longUrl" placeholder="Enter long URL (https://...)" />
+
+        <input type="number" id="expiry" placeholder="Expiry (minutes, optional)" />
+
+        <input type="text" id="alias" placeholder="Custom alias (optional)" />
+
+        <button onclick="shortenUrl()">Shorten URL</button>
+
+        <div id="result-card" class="card hidden">
+            <div class="result-header">
+                <span>🔗 Short URL</span>
+            </div>
+        
+            <div class="result-link">
+                <a id="shortUrlLink" href="#" target="_blank"></a>
+            </div>
+        
+            <div class="result-actions">
+                <button onclick="copyToClipboard()" class="secondary-btn">📋 Copy</button>
+                <a id="openBtn" target="_blank" class="secondary-btn">🔎 Open</a>
+            </div>
+        </div>
+        
+        <div id="analytics-card" class="card hidden"></div>        
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

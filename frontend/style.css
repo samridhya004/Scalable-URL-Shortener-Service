@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;        
+    padding: 0 16px;          
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;           
+    margin-top: 12px;         
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;   /* reduced */
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.result {
+    margin-top: 15px;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-header {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.result-link a {
+    font-size: 16px;
+    color: #2563eb;
+    word-break: break-all;
+    display: inline-block;
+    margin: 6px 0 4px 0;   /* 👈 THIS fixes uneven spacing */
+}
+
+.result-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.secondary-btn {
+    background: #f1f5f9;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+
+.secondary-btn:hover {
+    background: #e2e8f0;
+}
+
+.analytics-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+.analytics-item span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 90px; 
+}
+
+.analytics-item b,
+.analytics-item span:last-child {
+    font-weight: 600;
+    white-space: nowrap;
+}
