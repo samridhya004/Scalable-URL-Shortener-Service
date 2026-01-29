@@ -1,4 +1,4 @@
-# Design Document – URL Shortener Service
+# Design Document – Scalable URL Shortener Service
 
 ## 1. Overview
 

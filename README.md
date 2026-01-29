@@ -1,4 +1,4 @@
-# URL Shortener – PromptCloud Assignment
+# Scalable URL Shortener Service
 
 This project is a full-stack URL shortener built as part of the PromptCloud technical assignment.  
 It allows users to convert long URLs into short links, redirect using the short links, and view basic analytics such as click count and creation time.
@@ -178,4 +178,3 @@ The application can be tested manually using the browser or Swagger UI.
 ## Author
 
 **Samridhya Khajuria**
-PromptCloud Technical Assignment
