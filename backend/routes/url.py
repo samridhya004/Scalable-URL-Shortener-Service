@@ -111,12 +111,10 @@ def shorten_url(
     existing = db.query(URL).filter(URL.original_url == long_url).first()
 
     if existing:
-        # If expired → delete old entry
         if existing.expires_at and datetime.utcnow() > existing.expires_at:
             db.delete(existing)
             db.commit()
         else:
-            # UPDATE expiry if user provided a new one
             if request.expiry_minutes is not None:
                 existing.expires_at = expires_at
                 db.commit()
@@ -139,17 +137,14 @@ def shorten_url(
         alias_exists = db.query(URL).filter(URL.short_code == alias).first()
 
         if alias_exists:
-            # Same alias already points to same URL → reuse
             if alias_exists.original_url == long_url:
                 return {
                     "short_code": alias_exists.short_code,
                     "short_url": f"http://localhost:8000/{alias_exists.short_code}"
                 }
-            # Same alias already points to same URL but expired → delete
             if alias_exists.expires_at and datetime.utcnow() > alias_exists.expires_at:
                 db.delete(alias_exists)
                 db.commit()
-            # Alias points to a different URL → conflict
             else:
                 raise HTTPException(
                     status_code=409,
@@ -212,9 +207,6 @@ def redirect_url(short_code: str, db: Session = Depends(get_db)):
         url=url_entry.original_url,
         status_code=302
     )
-
-
-
 
 
 @router.get("/stats/{short_code}")
