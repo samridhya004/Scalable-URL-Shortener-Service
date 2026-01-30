@@ -71,7 +71,7 @@ promptcloud-url-shortener/
 ### 2. Clone the Repository
 
 ```bash
-git clone <https://github.com/samridhya004/Scalable-URL-Shortener-Service>
+git clone https://github.com/samridhya004/Scalable-URL-Shortener-Service
 cd promptcloud-url-shortener
 ```
 
