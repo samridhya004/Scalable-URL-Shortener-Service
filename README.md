@@ -77,12 +77,12 @@ cd promptcloud-url-shortener
 
 ### 3. Create and Activate Virtual Environment
 
-#### Windows (Command Prompt / PowerShell)
+#### Windows (CMD Prompt)
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
-#### macOS / Linux
+#### macOS / Linux (Terminal Prompt)
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -114,15 +114,18 @@ http://127.0.0.1:8000/docs
 
 ### 6. Run the Frontend
 
-Open the frontend by directly opening:
+#### Windows 
 
 ```bash
-frontend/index.html
+start frontend/index.html
+```
+#### MacOS 
+
+```bash
+open frontend/index.html
 ```
 
-in any modern web browser.
-
-The frontend communicates with the backend running on localhost:8000.
+The frontend communicates with the backend running on localhost:8000
 
 ---
 
