@@ -72,7 +72,7 @@ promptcloud-url-shortener/
 
 ```bash
 git clone https://github.com/samridhya004/Scalable-URL-Shortener-Service
-cd promptcloud-url-shortener
+cd Scalable-URL-Shortener-Service
 ```
 
 ### 3. Create and Activate Virtual Environment
