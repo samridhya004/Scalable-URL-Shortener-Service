@@ -64,7 +64,7 @@ promptcloud-url-shortener/
 
 ### 1. Prerequisites
 
-- Python **3.9 - 3.12** (Python 3.13 is not supported due to SQLAlchemy compatibility)
+- Python **3.9 - 3.12** (Python 3.13+ is not supported due to SQLAlchemy compatibility)
 - pip (Python package manager)
 - Any modern web browser (Chrome, Firefox, Edge)
 
