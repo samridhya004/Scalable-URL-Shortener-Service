@@ -60,35 +60,59 @@ promptcloud-url-shortener/
 
 ```
 
-## How to Run the Project
+## Deployment
 
-### 1. Backend Setup
+### 1. Prerequisites
 
-Create and activate a virtual environment, then install dependencies:
+- Python 3.9 or higher
+- pip (Python package manager)
+- Any modern web browser (Chrome, Firefox, Edge)
+
+### 2. Clone the Repository
+
+```bash
+git clone <https://github.com/samridhya004/Scalable-URL-Shortener-Service>
+cd promptcloud-url-shortener
+```
+
+### 3. Create and Activate Virtual Environment
+
+#### Windows (Command Prompt / PowerShell)
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+#### macOS / Linux
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Start the backend server:
+### 5. Run the Backend Server
 
 ```bash
 uvicorn backend.main:app --reload
 ```
 
-The backend will be available at:
+Once started, the backend will be available at:
 
+#### Backend API:
 ```bash
 http://127.0.0.1:8000
 ```
 
-Swagger API documentation:
-
+#### Swagger API Docs:
 ```bash
 http://127.0.0.1:8000/docs
 ```
 
-### 2. Frontend Setup
+### 6. Run the Frontend
 
 Open the frontend by directly opening:
 
@@ -99,6 +123,8 @@ frontend/index.html
 in any modern web browser.
 
 The frontend communicates with the backend running on localhost:8000.
+
+---
 
 ## API Endpoints Overview
 
@@ -134,6 +160,29 @@ GET /stats/{short_code}
 
 Returns click count and creation timestamp for the short URL.
 
+---
+
+## Manual Testing
+
+The application can be tested manually using the browser or Swagger UI.
+
+### Create Short URL:
+- Open http://127.0.0.1:8000/docs
+- Use the `POST /shorten` endpoint
+- Provide a valid `long_url`
+- Optionally provide `expiry_minutes` and `custom_alias`
+
+### Redirect Test:
+- Copy the generated short URL
+- Paste it into a browser
+- Verify that it redirects to the original URL
+
+### Analytics Test:
+- Open `GET /stats/{short_code}`
+- Verify that the click count increases after each redirect
+
+---
+
 ## Design Decisions
 
 - SQLite is used for simplicity and ease of setup.
@@ -146,6 +195,8 @@ Returns click count and creation timestamp for the short URL.
 
 - Detailed architectural decisions are documented in DESIGN.md.
 
+---
+
 ## Assumptions & Notes
 
 - The application is intended for local/demo usage.
@@ -156,24 +207,7 @@ Returns click count and creation timestamp for the short URL.
 
 - Error handling is focused on clarity rather than verbosity.
 
-## Manual Testing
-
-The application can be tested manually using the browser or Swagger UI.
-
-### Create Short URL
-- Open http://127.0.0.1:8000/docs
-- Use the `POST /shorten` endpoint
-- Provide a valid `long_url`
-- Optionally provide `expiry_minutes` and `custom_alias`
-
-### Redirect Test
-- Copy the generated short URL
-- Paste it into a browser
-- Verify that it redirects to the original URL
-
-### Analytics Test
-- Open `GET /stats/{short_code}`
-- Verify that the click count increases after each redirect
+---
 
 ## Author
 
